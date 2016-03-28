@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.min.css">
+  <link rel="stylesheet" href="//cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="style/style.css" media="screen" />
+  <script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+  <script src="jquery-ui-1.11.4/jquery-ui.min.js"></script>
+  <script src="//cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="script/script.js"></script>
+</head>
+
+<body>
+  <form>
+      <div>
+        <label>Veuillez choisir une commune française : </label>
+        <input id="commune" type="text" name="commune">
+      </div>
+
+      <div>
+        <label>Nombre maximal de résultats : </label>
+        <input type="radio" name="nbResultats" value="5" checked="checked"/> <label>5</label>
+        <input type="radio" name="nbResultats" value="10"/> <label>10</label>
+        <input type="radio" name="nbResultats" value="20"/> <label>20</label>
+        <input type="radio" name="nbResultats" value="50"/> <label>50</label>
+        <input type="radio" name="nbResultats" value="100"/> <label>100</label>
+      </div>
+    
+      <div>
+        <label> Si vous le souhaitez, entrez une date de prise minimale : </label> 
+        <input type="text" id="calendrier">
+      </div>
+
+    <!--on pense absolument à donner le type "button" pour éviter que la page se rafraichisse lorsqu'on clique dessus-->
+    <div>
+      <button type="button" id="recup_photos" >Trouver des photos</button> 
+    </div>
+    <p>Soyez patient, la recherche peut prendre un peu de temps</p>
+  </form>
+
+  <!--Mise en place des onglets (UI Tabs)-->
+  <div id="onglets">
+    <ul>
+      <li><a href="#onglet-1">Diaporama</a></li>
+      <li><a href="#onglet-2">Informations</a></li>
+    </ul>
+    <div id="onglet-1">
+      <div id="images">  </div>
+    </div>
+    <div id="onglet-2">
+      <table id="table_infos">
+        <thead>
+          <tr>
+            <th>Photographie</th>
+            <th>Nom de la photo</th>
+            <th>Date de la prise</th>
+            <th>Auteur</th>   
+            <th>Description</th>         
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>rzpogfjeoprzgjegprzeoijrg</td>
+            <td>rzpogfjeoprzgjegprzeoijrg</td>
+            <td>rzpogfjeoprzgjegprzeoijrg</td>
+            <td>rzpogfjeoprzgjegprzeoijrg</td>
+            <td>rzpogfjeoprzgjegprzeoijrg</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!--Fenêtres modales (UI Dialog)-->
+  <div id="aucun_resultat" title="Aucun résultat pour cette commune"> Veuillez tenter une nouvelle recherche</div> <!--quand la recherche ne donne aucun résultat-->
+  <div id="infos_photo" title="Informations"></div> <!--pour obtenir des informations sur une photo-->
+
+</body>
+</html>
