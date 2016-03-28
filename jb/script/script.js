@@ -88,6 +88,7 @@ $(function(){
     });
     */
     $.getJSON(flickrSearch, {
+      //ajoutés par la technique des URL longues à l'URL flickrSearch
       sort:"relevance", //on pense à trier les résultats obtenus par pertinence
       text: $("#commune").val() //on utilise text plutôt que tags qui donne des résultats bien moins pertinents
       }, 
