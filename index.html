@@ -5,21 +5,30 @@
 	<head>
 		<title>PROJET JS</title>
 		<meta charset="utf-8" />
-		<!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
+		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<script type="text/javascript" src="http://infoweb-ens/~jacquin-c/jquery-1.11.3.min.js"></script>
 		<script src="JS/vue.js"  type="text/javascript"></script>
 	</head>
 	<body>
-		<p>entrez votre recherche ici : </p>
-		<form id="search_form" >
-			<input type="text" id="keywords" placeholder="tapez votre recherche ici">
-			<button type="submit" id="submit">Submit</button>
-		</form>
-				<div id="resultats">
-				</div>
+		<header id="header">
+			<div class="content">
+				<h1>Bienvenue sur le site du projet Javascript</h1>
+				<h2>Par Jean-Baptiste Lacour et Emmanuel Rochet</h2>
+				<h3>Entrez votre recherche ici :</h3>
+				<form id="search_form" >
+					<input type="text" id="keywords" placeholder="tapez votre recherche ici">
+					<button type="submit" id="submit">Submit</button>
+				</form>
+			</div>
+		</header>
+		<header class="major">
+			<div id="resultats">
+		
+			</div>
+		</header>
 	</body>
 </html>
